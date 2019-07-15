@@ -16,5 +16,5 @@ class Filter(Base):
             dirname, basename = split(
                 candidate.get('action__path', candidate['word']))
             if basename:
-                candidate['abbr'] = "{} - {}".format(basename, path)
+                candidate['abbr'] = ' '.join([basename, dirname])
         return context['candidates']
