@@ -8,8 +8,8 @@ class Filter(Base):
     def __init__(self, vim):
         super().__init__(vim)
 
-        self.name = 'converter/prioritize_basename'
-        self.description = 'convert to prioritize action path base name.'
+        self.name = 'converter/basename_abbr'
+        self.description = 'convert candidate abbr to basename'
 
     def filter(self, context):
         for candidate in context['candidates']:
