@@ -13,8 +13,7 @@ class Filter(Base):
 
     def filter(self, context):
         for candidate in context['candidates']:
-            dirname, basename = split(
-                candidate.get('action__path', candidate['word']))
+            dirname, basename = split(candidate['word'])
             if basename:
                 candidate['abbr'] = ' '.join([basename, dirname])
         return context['candidates']
